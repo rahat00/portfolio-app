@@ -6,9 +6,6 @@ function HireUs() {
 
 
   const [state, handleSubmit] = useForm("xjvjpgdn");
-  if (state.succeeded) {
-      return <p>thanks for joining us!</p>;
-  }
     return (
         <div className="hire">
             <div className="hire-image">
@@ -42,7 +39,7 @@ function HireUs() {
 
                     </div>
                         <input className="hire-send" type="submit" name="button" value="SEND" disabled={state.submitting} />
-                        <p>{state.succeeded ? <p>thanks for joining us!</p> : <p>something want wrong!</p> }</p> 
+                        <p>{state.succeeded ? <p style={{color: "green"}}> message sent. we'll let you soon. thanks for joining us!</p> : <p style={{color: "red"}} >something want wrong!</p> }</p> 
                     
                 </div>
             </form>
